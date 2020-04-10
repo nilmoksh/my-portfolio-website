@@ -1,0 +1,32 @@
+
+
+<ng-template #loading>
+  <h2 class="loading">Loading blogs</h2>
+</ng-template>
+
+<ul class="careers" *ngIf="careers$ | async as careers;else loading">
+  <li *ngFor="let career of careers | slice:start:end" [title]="career | json"
+      [class.discontinued]="career.name" [class.selected]="selectedCareer === career"
+      (click)="onSelect(career)">
+     
+      <span class="name">{{ career.name | uppercase }}</span>
+     
+      <span class="description">{{ career.description }}</span>
+     
+  </li>
+</ul>
+
+
+
+<div>
+  <button (click)="previousPage()" [disabled]="start === 0">
+      < Previous Page </button>
+
+          Page {{ currentPage }}
+
+          <button (click)="nextPage()" [disabled]="careersNb <= end">
+              Next Page >
+          </button>
+</div>
+
+<app-career-detail [career]="selectedCareer"></app-career-detail>

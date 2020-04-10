@@ -1,0 +1,35 @@
+<div class="site">
+  <div class="site-content">
+    <div class="container-fullwidth">
+      <nav class="navbar navbar-expand navbar-dark">
+        <div class="navbar-nav">
+          <a class="nav-item nav-link" [routerLink]="['/home']" routerLinkActive="active"><i
+               class="d-none d-sm-inline-block fas fa-home mx-1"></i>Consultancy</a>
+        
+          <a class="nav-item nav-link" [routerLink]="['/contact']" routerLinkActive="active"><i
+               class="d-none d-sm-inline-block fas fa-envelope mx-1"></i>Contact</a>
+         <a class="nav-item nav-link" [routerLink]="['/career']" routerLinkActive="active"><i
+              class="d-none d-sm-inline-block fas fa-envelope mx-1"></i>Blog</a>
+        </div>
+      </nav>
+    </div>
+    <div class="header">
+      <div class="container-fullwidth">
+      
+      </div>
+    </div>
+    <main class="container-fullwidth">
+      <router-outlet></router-outlet>
+    </main>
+  </div>
+  <footer class="container-fullwidth">
+    <div class="row">
+      <div class="col-12 col-sm-6">
+        <p>Copyright © 2020 Intalena.IO</p>
+      </div>
+      <div class="col-12 col-sm-6">
+   
+      </div>
+    </div>
+  </footer>
+</div>
