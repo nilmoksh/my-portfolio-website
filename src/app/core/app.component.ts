@@ -7,4 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'talena.io';
+  currentYear: number;
+
+  constructor() {
+    this.currentYear = new Date().getFullYear();
+  }
 }
